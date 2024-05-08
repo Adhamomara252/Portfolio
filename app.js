@@ -6,7 +6,7 @@ var scrolling = scrollY;
 
 function checkResize() {
     if (window.innerWidth <= 767) {
-        document.querySelectorAll(".projects .main-projects article").forEach(function (x) {
+        document.querySelectorAll(".projects .main-projects article").forEach(function(x) {
             if (x.nextElementSibling !== null)
                 x.nextElementSibling.style.height = `calc(${x.clientHeight}px + clamp(40px, 10vw , 80px))`;
             else
@@ -17,17 +17,17 @@ function checkResize() {
 
 checkResize();
 
-list.addEventListener("click", function () {
+list.addEventListener("click", function() {
     nav.style.right = "0";
 })
 
-closeBtn.addEventListener("click", function () {
+closeBtn.addEventListener("click", function() {
     nav.style.right = "min(-70%, -350px)";
 })
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function() {
     if (this.scrollY != 0)
-        header.style.background='none';
+        header.style.background = 'none';
     else
         header.style.setProperty("box-shadow", "none");
 
